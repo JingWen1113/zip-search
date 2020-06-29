@@ -17,7 +17,7 @@ class zipContainer extends Component {
 
     fetchLocations= async() =>{ //calls api after the zip state is updated this way it can get information for specific zip address
         try{
-            let zipGiven = this.Zip;
+            let zipGiven = this.state.Zip;
             console.log('this is the zip: '+zipGiven);
             let response = await fetch('http://ctp-zip-api.herokuapp.com/zip/'+zipGiven, { method: 'GET'} )
             console.log(response);
@@ -35,8 +35,21 @@ class zipContainer extends Component {
         }
     }
 
+    onSubmit= async(event)=>{
+        event.preventDefault()
+        if(this.state.Zip === "" || !this.state.Zip){
+            return(alert('Need a zip code'));
+        }
+        if(isNaN(this.state.Zip)){
+            return(alert("This is not a zip code!"))
+        }
+        this.fetchLocations()
+        console.log("fetching info on Zip");
+    }
+
     render(){
         const{Zip}=this.state.Zip
+        console.log(this.state.Zip);
         return(
             <div>
                 <form onSubmit={this.onSubmit}>
