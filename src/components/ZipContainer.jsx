@@ -23,6 +23,7 @@ class zipContainer extends Component {
             console.log(response);
             const status = response.status
             let result = await response.json();
+            console.log(result);
             if (status === 400 || status === 500) {
                 console.log(result.error)
               } else {
