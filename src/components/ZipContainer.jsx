@@ -36,7 +36,7 @@ class zipContainer extends Component {
     }
 
     render(){
-        const{Zip}=this.state
+        const{Zip}=this.state.Zip
         return(
             <div>
                 <form onSubmit={this.onSubmit}>
