@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import ZipDisplay from "./ZipDisplay"
 
 class zipContainer extends Component {
     constructor(props){
@@ -27,7 +27,7 @@ class zipContainer extends Component {
             if (status === 400 || status === 500) {
                 console.log(result.error)
               } else {
-                this.setState({Allplaces:result.data, Exist:true})//updates array and makes it so if the address is real Exist is true. 
+                this.setState({Allplaces:result, Exist:true})//updates array and makes it so if the address is real Exist is true. 
                 console.log('array of state is updated')
             }
 
@@ -57,6 +57,7 @@ class zipContainer extends Component {
                     <input type="text" onChange={this.onChange} value={Zip}></input>
                     <input type="submit"></input>
                 </form>
+                <ZipDisplay cities = {this.state.Allplaces}/>
             </div>
         )
     }
