@@ -94,7 +94,55 @@
     transform: translate(0);
   }
 }
+.city-headline {
+  display: block;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+.country-headline {
+  display: block;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+}
+.state-headline {
+  display: block;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+}
+.latitude-headline {
+  display: block;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+}
+.longtitude-headline {
+  display: block;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+}
+.population-headline {
+  display: block;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+}
+.zip-content {
+  display: flex !important;
+  flex-wrap: wrap;
+  max-width: 900px;
+  margin: 10% auto;
+}
 
+.zip-column {
+  padding: 20px;
+  text-align: left;
+  flex-grow: 1;
+  width: 22%;
+}
 .search-bar {
   background: #fefefe;
   border: none;
